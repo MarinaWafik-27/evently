@@ -2,6 +2,7 @@ import 'package:evently/common/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  // Light theme 
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.lightBgColors,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
@@ -17,6 +18,8 @@ class AppTheme {
     ),
     textTheme: _getTextTheme(AppColors.lightTextColors),
   );
+
+  // Dark theme
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.darkBgColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
@@ -32,6 +35,8 @@ class AppTheme {
     ),
     textTheme: _getTextTheme(AppColors.darkTextColor),
   );
+  
+  // Private method to get TextTheme based on text color (light & dark)
   static TextTheme _getTextTheme(Color textColor) {
     return TextTheme(
       labelSmall: TextStyle(
